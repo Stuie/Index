@@ -51,14 +51,12 @@ class SearchView: View() {
                     controller.resultsNotEmptyProperty
                 }
             }
-        }
-
-        resultsListView.whenVisible {
-            currentStage?.sizeToScene()
-        }
-
-        resultsListView.whenHidden {
-            currentStage?.sizeToScene()
+            whenVisible {
+                currentStage?.sizeToScene()
+            }
+            whenHidden {
+                currentStage?.sizeToScene()
+            }
         }
     }
 
